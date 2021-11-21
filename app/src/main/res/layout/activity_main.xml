@@ -5,63 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="10"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-
-            android:id="@+id/logo_name"
-            android:background="#F0F0F0"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="0.7"
-            android:layout_height="0dp"
-            android:drawableStart="@drawable/calendar_resize"
-            android:drawableEnd="@drawable/calendar_resize"
-            android:gravity="center"
-            android:text="tripper"
-            android:textAlignment="center"
-            android:textSize="12pt" />
-
-        <EditText
-            android:layout_weight="0.8"
-            android:id="@+id/search_diary"
-            android:layout_width="match_parent"
-            android:drawableLeft="@drawable/search_resize"
-            android:layout_margin="10dp"
-            android:drawablePadding="15dp"
-            android:layout_height="0dp"
-            android:hint="일기를 검색해보세요."/>
-
-        <ScrollView
-            android:layout_weight="7"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:background="#F0F0F0"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                tools:ignore="MissingConstraints">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/logo_name"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="9"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="tripper"
+                    android:textAlignment="center"
+                    android:textSize="10pt" />
+
+                <ImageView
+                    android:id="@+id/calendarImg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:srcCompat="@drawable/calendar_resize" />
             </LinearLayout>
-        </ScrollView>
 
-        <Button
-            android:layout_weight="0.5"
-            android:id="@+id/add_diary_btn"
-            android:layout_width="120dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:background="@drawable/btn_round"
-            android:text="일기 추가"
-            android:textColor="@color/white" />
+            <EditText
+                android:id="@+id/search_diary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/search_resize"
+                android:drawablePadding="15dp"
+                android:hint="일기를 검색해보세요." />
 
-    </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/add_diary_btn"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_round"
+                android:text="일기 추가"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
