@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "tripper"
+rootProject.name = "mobile_project_tripper"

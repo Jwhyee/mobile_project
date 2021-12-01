@@ -7,13 +7,13 @@ allprojects {
     }
 }
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.tripper"
-        minSdkVersion 28
-        targetSdkVersion 30
+        applicationId "com.example.mobile_project_tripper"
+        minSdkVersion 27
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -31,12 +31,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
 dependencies {
-    //implementation 'com.github.prolificinteractive:material-calendarview:${version}'
     implementation 'com.github.prolificinteractive:material-calendarview:04fae8175f'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
